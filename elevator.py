@@ -1,8 +1,10 @@
 import time
 
+
 def print_pause(prompt):
     print(prompt)
     time.sleep(0.7)
+
 
 print_pause("You have just arrived at your new job!")
 print_pause("You are in the elevator.")
