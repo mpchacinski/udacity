@@ -9,6 +9,8 @@ def ask_again():
         if "no" in response:
             print("OK, goodbye!")
         elif "yes" in response:
+            print("Very good, I'm happy to take another order.")
+            time.sleep(0.7)
             ask_choice()
         else:
             print("Sorry, I don't understand.")
