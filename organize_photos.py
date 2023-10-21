@@ -28,3 +28,8 @@ for filename in originals:
 make_place_directories(places)
 
 print(os.listdir())
+
+for filename in originals:
+
+    place = extract_place(filename)
+    os.rename(filename, os.path.join(place, filename))
