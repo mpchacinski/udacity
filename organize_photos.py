@@ -12,24 +12,25 @@ def make_place_directories(places):
         os.mkdir(place)
 
 
-path_photos = os.path.join("data", "Photos")
-os.chdir(path_photos)
-originals = os.listdir()
+def organize_photos(directory):
 
-places = []
+    os.chdir(directory)
+    originals = os.listdir()
 
-for filename in originals:
+    places = []
 
-    place = extract_place(filename)
-    if place not in places:
-        places.append(place)
+    for filename in originals:
 
+        place = extract_place(filename)
+        if place not in places:
+            places.append(place)
 
-make_place_directories(places)
+    make_place_directories(places)
 
-print(os.listdir())
+    for filename in originals:
 
-for filename in originals:
+        place = extract_place(filename)
+        os.rename(filename, os.path.join(place, filename))
 
-    place = extract_place(filename)
-    os.rename(filename, os.path.join(place, filename))
+if __name__ == "__main__":
+    organize_photos(os.path.join("data", "Photos"))
