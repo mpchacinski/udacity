@@ -37,3 +37,10 @@ class Cat:
         else:
             print("Meow!")
 
+
+class Husky(Dog):
+    origin = "Siberia"
+
+    def speak(self):
+        print("Awoooo!")
+
