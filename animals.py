@@ -1,6 +1,9 @@
 class Dog:
     scientific_name = "Canis lupus familiaris"
 
+    def __init__(self, name):
+        self.name = name
+
     def speak(self):
         print("Woof!")
 
@@ -10,9 +13,21 @@ class Dog:
         else:
             print("That's not food!")
 
-    def learn_name(self, name):
-        self.name = name
-
     def hear(self, words):
         if self.name in words:
             self.speak()
+
+
+class Cat:
+
+    def __init__(self):
+        self.mood = "neutral"
+
+    def speak(self):
+        if self.mood == "happy":
+            print("purr!")
+        elif self.mood = "angry":
+            print("Hiss!")
+        else:
+            print("Meow!")
+
