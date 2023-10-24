@@ -3,6 +3,12 @@ class Dog:
 
     def __init__(self, name):
         self.name = name
+        self.woofs = 1
+
+    def count(self):
+        for woof in range(self.woofs):
+            self.speak()
+        self.woofs += 1
 
     def speak(self):
         print("Woof!")
@@ -26,7 +32,7 @@ class Cat:
     def speak(self):
         if self.mood == "happy":
             print("purr!")
-        elif self.mood = "angry":
+        elif self.mood == "angry":
             print("Hiss!")
         else:
             print("Meow!")
