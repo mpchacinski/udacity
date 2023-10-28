@@ -109,13 +109,15 @@ class Game:
             winner = 1
         else:
             winner = 2
-        print(f"Game over! Player {winner} wins!!!")
+        print(f"Game over!")
+        print(f"Final result... Player 1: {self.score_p1}"
+              f" - Player 2: {self.score_p2}")
+        print(f"Player {winner} wins!")
         self.score_p1 = 0
         self.score_p2 = 0
         self.play_again()
 
     def play_again(self):
-
         play_again = ""
         while play_again not in ["y", "n"]:
             play_again = input("Would you like to play again (y/n)").lower()
